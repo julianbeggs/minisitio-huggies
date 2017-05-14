@@ -1,0 +1,15 @@
+.thumbnail img {
+  max-height: 150px
+}
+
+.thumbnail .description {
+  -webkit-column-rule: #7f7f7f;
+  -moz-column-rule: #7f7f7f;
+  -o-column-rule: #7f7f7f;
+  column-rule: #7f7f7f;
+}
+
+.price {
+  font-weight: bold;
+  font-size: 16px;
+}
