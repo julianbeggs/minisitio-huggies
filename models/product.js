@@ -6,6 +6,7 @@ var schema = new Schema({
   name: {type: String, required: true},
   description: {type: String, required: true},
   images: {type: Array, required: true},
+  price: {type: Number, required: true},
   prices: {type: Array, required: true},
   moq: {type: Number, required: true},
   hscode: {type: String, required: false},

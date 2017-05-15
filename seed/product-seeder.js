@@ -11,6 +11,7 @@ var products = [
     name: 'Peluche Alcancia con Sonido',
     description: 'Tamaño del producto: 10 cms de alto, Material: plush, Certificación EN71, FAMA, Packaging: Bolsa plástica individual, Plazo de entrega 90 días',
     images: ['/images/99999a.png', '/images/99999b.png'],
+    price: 4.88,
     prices: [{
       tier: 1,
       qty: 20000,
@@ -37,6 +38,7 @@ var products = [
     name: 'Mochilas',
     description: 'Tamaño de los productos: 30 cms de alto, Material: plastico, Certificación EN71, Packaging. Bolsa plástica individual, Plazo de entrega 90 días.',
     images: ['/images/77777a.png', '/images/77777b.png'],
+    price: 4.88,
     prices: [{
       tier: 1,
       qty: 20000,
@@ -63,6 +65,7 @@ var products = [
     name: 'Toalla Capucha Personajes',
     description: 'Material: 320 gsm, Medidas60 x 120 cms, Logo Impreso 3 modelos a elegir, Envase: bolsa plástica',
     images: ['/images/88888a.png', '/images/88888b.png'],
+    price: 4.88,
     prices: [{
       tier: 1,
       qty: 20000,
@@ -89,6 +92,7 @@ var products = [
     name: 'Peluche Alcancia con Sonido 2',
     description: 'Tamaño del producto: 10 cms de alto, Material: plush, Certificación EN71, FAMA, Packaging: Bolsa plástica individual, Plazo de entrega 90 días',
     images: ['/images/99999a.png', '/images/99999b.png'],
+    price: 4.88,
     prices: [{
       tier: 1,
       qty: 20000,
@@ -115,6 +119,7 @@ var products = [
     name: 'Mochilas 2',
     description: 'Tamaño de los productos: 30 cms de alto, Material: plastico, Certificación EN71, Packaging. Bolsa plástica individual, Plazo de entrega 90 días.',
     images: ['/images/77777a.png', '/images/77777b.png'],
+    price: 4.88,
     prices: [{
       tier: 1,
       qty: 20000,
@@ -141,6 +146,7 @@ var products = [
     name: 'Toalla Capucha Personajes 2',
     description: 'Material: 320 gsm, Medidas60 x 120 cms, Logo Impreso 3 modelos a elegir, Envase: bolsa plástica',
     images: ['/images/88888a.png', '/images/88888b.png'],
+    price: 4.88,
     prices: [{
       tier: 1,
       qty: 20000,
