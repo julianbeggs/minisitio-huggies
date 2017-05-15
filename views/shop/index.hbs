@@ -1,15 +1,41 @@
+{{# each products }}
 <div class="row">
+  {{# each this }}
   <div class="col-sm-6 col-md-4">
     <div class="thumbnail">
-      <img src="http://placehold.it/350x150" class="img-responsive">
+      <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+          {{# each images}}
+            {{#if @first }}
+              <div class="item active">
+                <img src="{{ this }}" alt="...">
+              </div>
+            {{else}}
+              <div class="item">
+                <img src="{{ this }}" alt="...">
+              </div>
+            {{/if}}
+          {{/each}}
+        </div>
+      </div>
       <div class="caption">
-        <h3>Thumbnail label</h3>
+        <h3>{{ this.name }}</h3>
         <p class="description">{{ this.description }}</p>
         <div class="clearfix">
-          <div class="price pull-left">$99</div>
-          <a href="#" class="btn btn-success pull-right" role="button">Button</a>
+          <ul class="list-group">
+            {{#each prices}}
+            <li class="list-group-item">
+              <span class="badge">${{ this.price }}</span>
+              <span>Tier {{ this.tier }}: {{ this.qty }} unidades</span>
+            </li>
+            {{/each}}
+          </ul>
+          <a href="/add-to-cart/{{id}}" class="btn btn-success pull-right" role="button">Add to Cart</a>
         </div>
       </div>
     </div>
   </div>
+  {{/each}}
 </div>
+{{/each}}
