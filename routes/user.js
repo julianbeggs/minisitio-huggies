@@ -9,7 +9,7 @@ var Cart = require('../models/cart');
 var csrfProtection = csrf();
 router.use(csrfProtection);
 
-router.get('/profile', isLoggedIn, function (req, res, next) {
+router.get('/orders', function (req, res, next) {
     Order.find({user: req.user}, function(err, orders) {
         if (err) {
             return res.write('Error!');
@@ -19,11 +19,11 @@ router.get('/profile', isLoggedIn, function (req, res, next) {
             cart = new Cart(order.cart);
             order.items = cart.generateArray();
         });
-        res.render('user/profile', { orders: orders });
+        res.render('user/orders', { orders: orders });
     });
 });
 
-router.get('/logout', isLoggedIn, function (req, res, next) {
+router.get('/logout', function (req, res, next) {
     req.logout();
     res.redirect('/');
 });
