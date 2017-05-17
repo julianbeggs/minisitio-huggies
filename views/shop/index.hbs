@@ -39,7 +39,12 @@
             </li>
             {{/each}}
           </ul>
-          <a href="/add-to-cart/{{id}}" class="btn btn-success pull-right" role="button">Add to Cart</a>
+            <form class="form form-inline" action="/add-to-cart/{{id}}" method="get">
+              <div class="form-group col-sm-4 col-md-6">
+                <input type="number" class="form-control pull-left" id="addQty" name="addQty" placeholder="MOQ={{ this.moq }}" required size="9" min="{{this.moq}}">
+                <input type="submit" class="btn btn-success pull-right" value="Agregar">
+              </div>
+            </form>
         </div>
       </div>
     </div>

@@ -19,18 +19,21 @@ router.get('/', function (req, res, next) {
 });
 
 router.get('/add-to-cart/:id', function(req, res, next) {
-    var productId = req.params.id;
-    var cart = new Cart(req.session.cart ? req.session.cart : {});
+  console.log('res.params:', req.params);
+  console.log('res.query:', req.query);
+  var productId = req.params.id;
+  var addQty = req.query.addQty;
+  var cart = new Cart(req.session.cart ? req.session.cart : {});
 
-    Product.findById(productId, function(err, product) {
-       if (err) {
-           return res.redirect('/');
-       }
-        cart.add(product, product.id);
-        req.session.cart = cart;
-        console.log(req.session.cart);
-        res.redirect('/');
-    });
+  Product.findById(productId, function(err, product) {
+     if (err) {
+         return res.redirect('/');
+     }
+      cart.add(product, product.id, parseInt(addQty, 10));
+      req.session.cart = cart;
+      console.log(req.session.cart);
+      res.redirect('/');
+  });
 });
 
 router.get('/reduce/:id', function(req, res, next) {
