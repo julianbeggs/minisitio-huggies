@@ -1,9 +1,9 @@
-{{!-- <div class="row">
+<div class="row">
   <div class="col-md-4 col-md-offset-4">
-    <h1>Sign Up</h1>
+    <h1>Registración</h1>
     {{#if hasErrors }}
       <div class="alert alert-danger">
-        {{# each messages}}
+        {{#each messages}}
         <p>{{ this }}</p>
         {{/each}}
       </div>
@@ -12,13 +12,9 @@
       <div class="form-group">
         <label for="email">Email</label>
         <input type="text" class="form-control" id="email" name="email" placeholder="email">
-        <p class="help-block">Help text here.</p>
-        <label for="password">Password</label>
-        <input type="text" class="form-control" id="password" name="password" placeholder="password">
-        <p class="help-block">Help text here.</p>
         <input type="hidden" name="_csrf" value="{{ csrfToken }}">
-        <button class="btn btn-primary" type="submit" name="button">Sign Up</button>
+        <button class="btn btn-primary" type="submit" name="button">Registrar</button>
       </div>
     </form>
   </div>
-</div> --}}
+</div>

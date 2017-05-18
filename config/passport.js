@@ -14,11 +14,10 @@ passport.deserializeUser(function(id, done) {
 
 passport.use('local.signup', new localStrategy({
   usernameField: 'email',
-  passwordField: 'password',
+  passwordField: 'email',
   passReqToCallback: true
 }, function(req, email, password, done) {
   req.checkBody('email', 'Invalid email.').notEmpty().isEmail();
-  req.checkBody('password', 'Invalid password.').notEmpty().isLength({min: 4});
   var errors = req.validationErrors()
   if (errors) {
     var messages = []
@@ -48,11 +47,10 @@ passport.use('local.signup', new localStrategy({
 
 passport.use('local.signin', new localStrategy({
   usernameField: 'email',
-  passwordField: 'password',
+  passwordField: 'email',
   passReqToCallback: true
 }, function(req, email, password, done) {
   req.checkBody('email', 'Invalid email.').notEmpty().isEmail();
-  req.checkBody('password', 'Invalid password.').notEmpty()
   var errors = req.validationErrors()
   if (errors) {
     var messages = []

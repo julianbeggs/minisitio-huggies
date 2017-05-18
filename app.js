@@ -36,10 +36,10 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.use(validator())
 app.use(cookieParser());
 app.use(session({
-  secret: 'this is my great secret',
+  store: new MongoStore({mongooseConnection: mongoose.connection}),
+  secret: 'bigla top secret',
   resave: false,
   saveUninitialized: false,
-  store: new MongoStore({mongooseConnection: mongoose.connection}),
   cookie: { maxAge: 180 * 60 * 1000 }
 }))
 app.use(flash());
