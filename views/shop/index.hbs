@@ -1,3 +1,4 @@
+{{#if login}}
 <div class="row">
     <div class="col-sm-6 col-md-4 col-md-offset-4 col-sm-offset-3">
         <div id="success" class="alert alert-success" {{#if noMessages}}hidden{{/if}}>
@@ -5,16 +6,15 @@
         </div>
     </div>
 </div>
-
-{{# each products }}
+{{#each products }}
 <div class="row">
-  {{# each this }}
+  {{#each this }}
   <div class="col-sm-6 col-md-4">
     <div class="thumbnail">
       <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
         <!-- Wrapper for slides -->
         <div class="carousel-inner" role="listbox">
-          {{# each images}}
+          {{#each images}}
             {{#if @first }}
               <div class="item active">
                 <img src="{{ this }}" alt="...">
@@ -40,7 +40,7 @@
             </li>
             {{/each}}
           </ul>
-            <form class="form form-inline" action="/add-to-cart/{{id}}" method="get">
+            <form class="form form-inline" action="/cart/add-to-cart/{{id}}" method="get">
               <div class="form-group col-sm-4 col-md-6">
                 <input type="number" class="form-control pull-left" id="addQty" name="addQty" placeholder="MOQ={{ this.moq }}" required size="9" min="{{this.moq}}">
               </div>
@@ -53,3 +53,7 @@
   {{/each}}
 </div>
 {{/each}}
+
+{{else}}
+<h1>Not logged in......</h1>
+{{/if}}

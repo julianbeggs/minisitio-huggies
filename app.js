@@ -13,8 +13,9 @@ var validator = require('express-validator');
 var MongoStore = require('connect-mongo')(session);
 
 // require routes
-var index = require('./routes/index');
+var cartRoutes = require('./routes/cart');
 var userRoutes = require('./routes/user');
+var index = require('./routes/index');
 
 var app = express();
 mongoose.connect('mongodb://localhost:27017/shopping')
@@ -54,6 +55,7 @@ app.use(function (req, res, next) {
 })
 
 app.use('/user', userRoutes);
+app.use('/cart', cartRoutes);
 app.use('/', index);
 
 // catch 404 and forward to error handler
