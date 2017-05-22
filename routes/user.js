@@ -34,31 +34,30 @@ router.use('/', notLoggedIn, function (req, res, next) {
     next();
 });
 
-router.get('/signup', function (req, res, next) {
-    var messages = req.flash('error');
-    res.render('user/signup', {csrfToken: req.csrfToken(), messages: messages, hasErrors: messages.length > 0});
-});
-
-router.post('/signup', passport.authenticate('local.signup', {
-    failureRedirect: '/user/signup',
-    failureFlash: true
-}), function (req, res, next) {
-  // signup successful
-  // send email
-  console.log('sending email....');
-  sendEmail('baijulin@gmail.com', 'Signup email', 'Test message');
-  // redirect
-  if (req.session.oldUrl) {
-    var oldUrl = req.session.oldUrl;
-    req.session.oldUrl = null;
-    res.redirect(oldUrl);
-  } else {
-    res.redirect('/');
-  }
-});
+// router.get('/signup', function (req, res, next) {
+//     var messages = req.flash('error');
+//     res.render('user/signup', {csrfToken: req.csrfToken(), messages: messages, hasErrors: messages.length > 0});
+// });
+//
+// router.post('/signup', passport.authenticate('local.signup', {
+//     failureRedirect: '/user/signup',
+//     failureFlash: true
+// }), function (req, res, next) {
+//   // signup successful
+//   // send email
+//   // console.log('sending signup email to: '+req.user.email);
+//   // sendEmail(req.user.email, 'Acceso autorizado', '<h2>Email {{req.user.email}} está autorizado para acceder.</h2>');
+//   // redirect
+//   if (req.session.oldUrl) {
+//     var oldUrl = req.session.oldUrl;
+//     req.session.oldUrl = null;
+//     res.redirect(oldUrl);
+//   } else {
+//     res.redirect('/');
+//   }
+// });
 
 router.get('/signin', function (req, res, next) {
-  // sendEmail('baijulin@gmail.com', 'signin email', 'Test message');
   var messages = req.flash('error');
   res.render('user/signin', {csrfToken: req.csrfToken(), messages: messages, hasErrors: messages.length > 0});
 });
@@ -74,6 +73,7 @@ router.post('/signin', passport.authenticate('local.signin', {
     } else {
         res.redirect('/');
     }
+    sendEmail('bigla.developer@gmail.com', 'Login al sitio KC', 'User '+req.user.email+' has signed in.');
 });
 
 module.exports = router;

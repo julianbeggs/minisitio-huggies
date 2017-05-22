@@ -17,7 +17,8 @@ passport.use('local.signup', new localStrategy({
   passwordField: 'email',
   passReqToCallback: true
 }, function(req, email, password, done) {
-  req.checkBody('email', 'Invalid email.').notEmpty().isEmail();
+  req.checkBody('email', 'No puede estar vacío.').notEmpty()
+  req.checkBody('email', 'No es un email válido.').isEmail()
   var errors = req.validationErrors()
   if (errors) {
     var messages = []
@@ -30,9 +31,13 @@ passport.use('local.signup', new localStrategy({
     if (err) {
       return done(err)
     }
+    // user found in db
     if (user) {
-      return done(null, false, {message: 'Email is already in use.'})
+      return done(null, false, {message: 'Email autorizado.'})
     }
+    // user not found in db
+
+    // create new user
     var newUser = new User()
       newUser.email = email
       newUser.password = newUser.encryptPassword(password)
@@ -50,7 +55,9 @@ passport.use('local.signin', new localStrategy({
   passwordField: 'email',
   passReqToCallback: true
 }, function(req, email, password, done) {
-  req.checkBody('email', 'Invalid email.').notEmpty().isEmail();
+  req.checkBody('email', 'No es un email válido.').isEmail();
+  req.checkBody('email', 'Email no puede estar vacío.').notEmpty();
+  req.checkBody('email', 'Email debe tener sólo minúsculas.').isLowercase();
   var errors = req.validationErrors()
   if (errors) {
     var messages = []
