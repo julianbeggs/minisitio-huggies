@@ -19,6 +19,8 @@
     "hbs": "~4.0.1",
     "mongoose": "^4.9.9",
     "morgan": "~1.8.1",
+    "nodemailer": "^4.0.1",
+    "nodemailer-express-handlebars": "^2.0.0",
     "passport": "^0.3.2",
     "passport-local": "^1.0.0",
     "passport-local-mongoose": "^4.0.0",

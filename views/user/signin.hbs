@@ -1,20 +1,22 @@
 <div class="row">
-  <div class="col-md-5 col-md-offset-3">
-    <h1>¡Bienvenido!</h1>
-    {{#if hasErrors }}
-      <div class="alert alert-danger">
-        {{#each messages}}
-        <p>{{ this }}</p>
-        {{/each}}
-      </div>
-    {{/if}}
-    <form class="" action="/user/signin" method="post">
-      <div class="form-group">
-        <input type="text" class="form-control" id="email" name="email" placeholder="email">
-        <input type="hidden" name="_csrf" value="{{ csrfToken }}">
-        <button class="btn btn-primary" type="submit" name="button">Ingresar</button>
-      </div>
-    </form>
-    <p><a href="/user/signup">Pide acceso aquí</a></p>
+
+    <div class="col-md-5 col-md-offset-3">
+      <h1>¡Bienvenido!</h1>
+      {{#if hasErrors }}
+        <div class="alert alert-danger">
+          {{#each messages}}
+            <p>{{ this }}</p>
+          {{/each}}
+        </div>
+      {{/if}}
+      <form class="" action="/user/signin" method="post">
+        <div class="form-group">
+          <input type="text" class="form-control" id="email" name="email" placeholder="email">
+          <input type="hidden" name="_csrf" value="{{ csrfToken }}">
+          <button class="btn btn-primary" type="submit" name="button">Ingresar</button>
+        </div>
+      </form>
+      <p><a href="/user/signup">Pide acceso aquí</a></p>
+    </div>
   </div>
 </div>

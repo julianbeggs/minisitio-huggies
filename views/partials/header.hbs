@@ -8,41 +8,45 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="/">Brand</a>
+      <a class="navbar-brand" href="/">  LOGO  </a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <li>
+          <a href="/">
+            <span class="glyphicon glyphicon-cart" aria-hidden="true"></span>
+            <span class="">Catálogo</span>
+          </a>
+        </li>
+        <li>
           <a href="/cart">
             <span class="glyphicon glyphicon-cart" aria-hidden="true"></span>
-            <span class="badge">{{ session.cart.totalQty }}</span>
-            <span class=""> Carro</span>
+            <span class="">Pedido</span>
           </a>
         </li>
         <li>
           <a href="/user/orders">
-          <span class="glyphicon glyphicon-time" aria-hidden="true"> Pedidos</span>
-        </a>
-        </li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-            <span class="glyphicon glyphicon-user" aria-hidden="true"> Usuario
-              <span class="caret"></span>
-            </span>
+            <span class="glyphicon glyphicon-time" aria-hidden="true"></span>
+            <span>Historial</span>
           </a>
-          <ul class="dropdown-menu">
-            {{#if login }}
-              {{!-- <li role="separator" class="divider"></li> --}}
-              <li><a href="/user/logout">Logout</a></li>
-            {{else }}
-              <li><a href="/user/signin">Ingresar</a></li>
-              {{!-- <li><a href="/user/signup">Registro</a></li> --}}
-            {{/if}}
-
-          </ul>
         </li>
+        {{#if login }}
+          <li>
+            <a href="/user/logout">
+              <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+              <span>Cerrar Sessión</span>
+            </a>
+          </li>
+          {{else }}
+          <li>
+            <a href="/user/logout">
+              <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+              <span>Iniciar Sessión</span>
+            </a>
+          </li>
+        {{/if}}
       </ul>
     </div>
     <!-- /.navbar-collapse -->

@@ -40,7 +40,7 @@ app.use(session({
   secret: 'bigla top secret',
   resave: false,
   saveUninitialized: false,
-  cookie: { maxAge: 180 * 60 * 1000 }
+  cookie: { maxAge: 365 * 24 * 60 * 60 * 1000 } // milliseconds!
 }))
 app.use(flash());
 app.use(passport.initialize());
@@ -51,6 +51,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(function (req, res, next) {
   res.locals.login = req.isAuthenticated()
   res.locals.session = req.session;
+  res.locals.campana = "Back to School 2017"
   next()
 })
 

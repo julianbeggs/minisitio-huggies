@@ -4,9 +4,9 @@ var csrf = require('csurf');
 var passport = require('passport');
 var LocalStrategy = require('passport-local').Strategy;
 
-
 var Order = require('../models/order');
 var Cart = require('../models/cart');
+var sendEmail = require('../libs/send-email.js');
 
 var csrfProtection = csrf();
 router.use(csrfProtection);
@@ -43,16 +43,22 @@ router.post('/signup', passport.authenticate('local.signup', {
     failureRedirect: '/user/signup',
     failureFlash: true
 }), function (req, res, next) {
-    if (req.session.oldUrl) {
-      var oldUrl = req.session.oldUrl;
-      req.session.oldUrl = null;
-      res.redirect(oldUrl);
-    } else {
-      res.redirect('/');
-    }
+  // signup successful
+  // send email
+  console.log('sending email....');
+  sendEmail('baijulin@gmail.com', 'Signup email', 'Test message');
+  // redirect
+  if (req.session.oldUrl) {
+    var oldUrl = req.session.oldUrl;
+    req.session.oldUrl = null;
+    res.redirect(oldUrl);
+  } else {
+    res.redirect('/');
+  }
 });
 
 router.get('/signin', function (req, res, next) {
+  // sendEmail('baijulin@gmail.com', 'signin email', 'Test message');
   var messages = req.flash('error');
   res.render('user/signin', {csrfToken: req.csrfToken(), messages: messages, hasErrors: messages.length > 0});
 });
