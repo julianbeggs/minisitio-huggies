@@ -1,0 +1,10 @@
+email, firstname, lastname, country, role
+'Oscar.a.betancourt@kcc.com','Oscar','Betancourt','Regional', 'administrador'
+'Sylvia.m.schuler@kcc.com','Sylvia','Schuler','Regional', 'administrador'
+'Diego.f.miranda@kcc.com','Diego','Miranda','Regional', 'administrador'
+'Douglas.g.Franco@kcc.com','Douglas','Franco','Regional', 'aprobador'
+'gerhard.rost@kcc.com','Gerhard','Rost','C&C','usuario'
+'VanessaRocio.r.rodriguez@kcc.com','Vanessa Rocío','Rodriguez','Andino','usuario'
+'Florencia.luis@kcc.com','Florencia','Luis','Argentina','usuario'
+'Simone.d.simoes@kcc.com','Simone','Simoes','Brasil','usuario'
+'Jonathan.lamac@kcc.com','Jonathan','Lamac','Chile','usuario'
