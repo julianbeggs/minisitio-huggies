@@ -7,7 +7,7 @@ var products = [
     sku: '99999',
     name: 'Peluche Alcancia con Sonido',
     description: 'Tamaño del producto: 10 cms de alto, Material: plush, Certificación EN71, FAMA, Packaging: Bolsa plástica individual, Plazo de entrega 90 días',
-    images: ['/images/99999a.png', '/images/99999b.png', 'http://w3.siemens.com/mcms/automation/en/product-lifecycle-management-plm/plm-products/PublishingImages/plm-products.jpg', 'http://4e2w.blob.core.windows.net/images/2014/06/HOT-BABE-KAWASAKI-Z1000-motorcycles-31778270-1920-1200.jpg'],
+    images: ['/images/99999a.png', '/images/99999b.png', 'http://w3.siemens.com/mcms/automation/en/product-lifecycle-management-plm/plm-products/PublishingImages/plm-products.jpg'],
     price: 4.88,
     prices: [{
       tramo: 1,
