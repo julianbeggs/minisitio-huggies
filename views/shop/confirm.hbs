@@ -1,0 +1,66 @@
+{{#if login}}
+  {{#if products }}
+    <div class="row col-md-10 col-sm-12">
+      <h3>Confirmar Pedido</h3>
+      <h4 class="">Total: ${{totalPrice}}</h4>
+      <form action="/confirm" method="post" id="checkout-form">
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="form-group">
+              {{!-- <label for="name">Name</label>
+              <input type="text" id="name" class="form-control" required name="name"> --}}
+            </div>
+          </div>
+          <button type="submit" class="btn btn-success">Buy now</button>
+        </div>
+      </form>
+
+      {{!-- <div class="">
+        <a href="/confirm" type="button" class="btn btn-success">Confirmar Pedido</a>
+      </div> --}}
+      <hr>
+      <div class="table-responsive">
+        <table id="mytable" class="table table-bordred table-striped">
+          <thead>
+            <th>Imagen</th>
+            <th>Nombre</th>
+            <th>SKU</th>
+            <th>Cantidad</th>
+            <th>Precio</th>
+            <th></th>
+          </thead>
+          <tbody>
+            {{#each products }}
+              <tr class="">
+                <td>
+                  {{#each this.item.images}}
+                    {{#if @first}}
+                      <img src="{{this}}" alt="Imagen de Poducto" class="thumbnail-small">
+                    {{/if}}
+                  {{/each}}
+                </td>
+                <td>{{ this.item.name }}</td>
+                <td>{{ this.item.sku }}</td>
+                <td>{{ this.qty }}</td>
+                <td>${{ this.price }}</td>
+                <td>
+                  <a type="button" class="btn btn-danger btn-xs" href="/cart/remove/{{this.item._id}}"><span class="glyphicon glyphicon-trash"></span></a>
+                </td>
+              </tr>
+            {{/each}}
+          </tbody>
+        </table>
+
+
+        {{else }}
+        <div class="row">
+          <div class="col-sm-6 col-md-6 col-md-offset-2 col-sm-offset-2">
+            <p>CONFIRM ELSE</p>
+            <h3><a href="/">No hay pedidos en preparación. <br />Comienza un nuevo pedido.</a></h3>
+          </div>
+        </div>
+      </div>
+  {{/if}}
+{{else}}
+  <h2><a href="/">Debes ingresar primero.</a></h2>
+{{/if}}

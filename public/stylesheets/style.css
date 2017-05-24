@@ -1,5 +1,20 @@
+.signin-page {
+    /*background-image: url("https://unsplash.it/1600/1000/?random");*/
+    background-image: url("/images/huggies2_1_.jpg");
+    background-color: #ffffff;
+    background-position: top right;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.signin-title {
+  font-size: 250%;
+  color: #DA291C;
+  margin-top: 75%;
+}
+
 .thumbnail img {
-  max-height: 150px
+  max-height: 100px
 }
 
 .thumbnail-small {
@@ -8,69 +23,35 @@
 
 .thumbnail .description {
   -webkit-column-rule: #7f7f7f;
+  -ms-column-rule: #7f7f7f;
   -moz-column-rule: #7f7f7f;
   -o-column-rule: #7f7f7f;
   column-rule: #7f7f7f;
 }
 
-.badge {
-  font-weight: bold;
-  font-size: 16px;
+.badge, .btn-success, .btn-primary {
+  font-weight: normal;
+  font-size: 14px;
+  background-color: #DA291C;
+  border-color: white
 }
 
-.login2background{
-    background-image: url('/images/1024px-Well-clothed_baby.jpg');
-    background-repeat:no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-}
-.loginbox{
-    background: white;
-    color: black;
-    margin-top: 30%;
-    left: 0;
-    padding: 20px;
-    box-shadow: 0 8px 50px -2px #000;
-    border-radius:5px;
-
-}
-.logo{
-    width: 130px;
-    height: 55px;
-    margin-left: 10%;
-}
-@media (max-width:767px) {
-    .loginbox{
-        margin-top: 10%;
-    }
+.container-fluid {
+  background-color: white;
 }
 
-.loginbox_content{
-    padding:5% 11% 5% 11%;
-
+.navbar-brand,
+.navbar-nav li a {
+    line-height: 75px;
+    height: 75px;
+    padding-top: 0;
+    font-size: 120%;
 }
 
-.singtext{
-    font-family: "Open Sans",sans-serif;
-    font-size: 27px;
-    color: #82C226;
-    float: right;
-    padding-right: 25%;
+.logo {
+  max-height: 155px;
 }
 
-.submit-btn{
-    float: right;
-    margin-right: 28%;
-}
-
-.forgotpassword{
-    padding-left: 10%;
-}
-@media (max-width:800px) {
-    .submit-btn{
-
-        margin-right: 23%;
-    }
-
-
+.glyphicon {
+    font-size: 18px;
 }

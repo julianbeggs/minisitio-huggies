@@ -1,0 +1,50 @@
+<div class="row">
+  <div class="col-md-10 col-sm-12">
+    <h3>Confirmación de Pedido</h3>
+    <h4>Su Total: ${{ totalPrice }}</h4>
+    {{!-- <div class="">
+      <a href="/cart/confirm" type="button" class="btn btn-success">Confirmar Pedido</a>
+    </div> --}}
+    <hr>
+    <div class="table-responsive">
+      <table id="mytable" class="table table-bordred table-striped">
+        <thead>
+          <th>Imagen</th>
+          <th>Nombre</th>
+          <th>SKU</th>
+          <th>Cantidad</th>
+          <th>Precio</th>
+          <th></th>
+        </thead>
+        <tbody>
+          {{#each products }}
+            <tr class="">
+              <td>
+                {{#each this.item.images}}
+                  {{#if @first}}
+                    <img src="{{this}}" alt="Imagen de Poducto" class="thumbnail-small">
+                  {{/if}}
+                {{/each}}
+              </td>
+              <td>{{ this.item.name }}</td>
+              <td>{{ this.item.sku }}</td>
+              <td>{{ this.qty }}</td>
+              <td>${{ this.price }}</td>
+            </tr>
+          {{/each}}
+        </tbody>
+      </table>
+    </div>
+    <form action="/confirm" method="post" id="checkout-form">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" class="form-control" name="name" required>
+                </div>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-success">Confirmar</button>
+    </form>
+  </div>
+</div>

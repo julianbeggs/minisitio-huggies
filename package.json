@@ -1,40 +1,31 @@
 {
-  "name": "cart",
-  "version": "0.0.0",
-  "private": true,
-  "scripts": {
-    "start": "nodemon ./bin/www"
-  },
+  "name": "minisitio-huggies",
+  "version": "1.0.0",
+  "description": "Minisitio Huggies developes for Bigla Chile",
+  "main": "app.js",
   "dependencies": {
-    "bcrypt-nodejs": "0.0.3",
-    "body-parser": "~1.17.1",
+    "bcrypt-nodejs": "^0.0.3",
     "connect-flash": "^0.1.1",
     "connect-mongo": "^1.3.2",
-    "cookie-parser": "~1.4.3",
-    "csurf": "^1.9.0",
-    "debug": "~2.6.3",
-    "express": "~4.15.2",
-    "express-handlebars": "^3.0.0",
     "express-validator": "^3.2.0",
-    "hbs": "~4.0.1",
-    "mongoose": "^4.9.9",
-    "morgan": "~1.8.1",
+    "handlebars": "^4.0.10",
+    "handlebars-helpers": "^0.8.2",
     "nodemailer": "^4.0.1",
     "nodemailer-express-handlebars": "^2.0.0",
     "passport": "^0.3.2",
     "passport-local": "^1.0.0",
-    "passport-local-mongoose": "^4.0.0",
-    "serve-favicon": "~2.4.2",
-    "stripe": "^4.19.0"
+    "passport-local-mongoose": "^4.0.0"
   },
-  "main": "app.js",
   "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./bin/www"
+  },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@bitbucket.org/julianbeggs/shopping-cart.git"
+    "url": "git+ssh://git@bitbucket.org:julianbeggs/minisitio-huggies.git"
   },
-  "author": "",
-  "license": "ISC",
-  "homepage": "https://bitbucket.org/julianbeggs/shopping-cart#readme",
-  "description": ""
+  "author": "dev@triplezeta.o",
+  "license": "SEE LICENSE IN https://www.binpress.com/license/view/l/afc1c0401079ca29dd4bdd0b844a460d",
+  "homepage": "https://bitbucket.org/julianbeggs/shopping-cart#readme"
 }
