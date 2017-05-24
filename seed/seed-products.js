@@ -4,167 +4,170 @@ mongoose.connect('mongodb://localhost:27017/shopping')
 
 var products = [
   new Product({
-    sku: '99999',
-    name: 'Peluche Alcancia con Sonido',
-    description: 'Tamaño del producto: 10 cms de alto, Material: plush, Certificación EN71, FAMA, Packaging: Bolsa plástica individual, Plazo de entrega 90 días',
-    images: ['/images/99999a.png', '/images/99999b.png', 'http://w3.siemens.com/mcms/automation/en/product-lifecycle-management-plm/plm-products/PublishingImages/plm-products.jpg'],
-    price: 4.88,
+    sku: 'BHT-05',
+    name: 'Juguete Cascabel',
+    description: 'Poliester+PP+Algodón	14.5*8cm	Bolsa Plástica',
+    images: ['/images/BHT-05-img1.png', '/images/BHT-05-img2.png'],
+    price: 2.49,
     prices: [{
       tramo: 1,
       qty: 20000,
-      price: 4.88
+      price: 2.49
     },
     {
       tramo: 2,
       qty: 50000,
-      price: 3.68
+      price: 2.34
     },
     {
       tramo: 3,
       qty: 100000,
-      price: 3.48
-    }],
-    moq: 5000,
-    hscode: '8.888.888',
-    origin: 'China',
-    incoterms: 'CIF',
-    provider: 'latam@bigla.cl'
-  }),
-  new Product({
-    sku: '77777',
-    name: 'Mochilas',
-    description: 'Tamaño de los productos: 30 cms de alto, Material: plastico, Certificación EN71, Packaging. Bolsa plástica individual, Plazo de entrega 90 días.',
-    images: ['http://photos01.wisgoon.com/media/pin/photos01/images/o/2016/5/4/12/500x332_1462349579810857.jpeg', '/images/77777a.png', '/images/77777b.png'],
-    price: 4.88,
-    prices: [{
-      tramo: 1,
-      qty: 20000,
-      price: 4.88
+      price: 2.17
     },
     {
-      tramo: 2,
-      qty: 50000,
-      price: 3.68
-    },
-    {
-      tramo: 3,
-      qty: 100000,
-      price: 3.48
-    }],
-    moq: 30000,
-    hscode: '33.333.333',
-    origin: 'China',
-    incoterms: 'CIF',
-    provider: 'latam@bigla.cl'
-  }),
-  new Product({
-    sku: '88888',
-    name: 'Otro producto bueno',
-    description: 'Material: 320 gsm, Medidas60 x 120 cms, Logo Impreso 3 modelos a elegir, Envase: bolsa plástica',
-    images: ['/images/88888a.png', '/images/88888b.png', 'http://photos01.wisgoon.com/media/pin/photos01/images/o/2016/5/4/12/500x332_1462349579810857.jpeg'],
-    price: 4.88,
-    prices: [{
-      tramo: 1,
-      qty: 20000,
-      price: 4.88
-    },
-    {
-      tramo: 2,
-      qty: 50000,
-      price: 3.68
-    },
-    {
-      tramo: 3,
-      qty: 100000,
-      price: 3.48
-    }],
+      tramo: 4,
+      qty: 200000,
+      price: 1.99
+    }
+  ],
     moq: 20000,
-    hscode: '44.4444.44',
-    origin: 'China',
+    hscode: '',
+    origin: '',
     incoterms: 'CIF',
     provider: 'latam@bigla.cl'
   }),
   new Product({
-    sku: '66666',
-    name: 'Wow que buen producto',
-    description: 'Tamaño del producto: 10 cms de alto, Material: plush, Certificación EN71, FAMA, Packaging: Bolsa plástica individual, Plazo de entrega 90 días',
-    images: ['/images/99999a.png', '/images/99999b.png', 'http://cdns2.freepik.com/foto-gratis/_3296386.jpg'],
-    price: 4.88,
+    sku: 'BHT-01',
+    name: 'Juguete Colgante',
+    description: 'Poliester+PP+Algodón	25cm	Bolsa Plástica',
+    images: ['/images/BHT-01-img1.png'],
+    price: 2.64,
     prices: [{
       tramo: 1,
       qty: 20000,
-      price: 4.88
+      price: 2.64
     },
     {
       tramo: 2,
       qty: 50000,
-      price: 3.68
+      price: 2.33
     },
     {
       tramo: 3,
       qty: 100000,
-      price: 3.48
-    }],
-    moq: 50000,
-    hscode: '8.888.888',
-    origin: 'China',
+      price: 2.29
+    },
+    {
+      tramo: 4,
+      qty: 200000,
+      price: 1.64
+    }
+  ],
+    moq: 20000,
+    hscode: '',
+    origin: '',
     incoterms: 'CIF',
     provider: 'latam@bigla.cl'
   }),
   new Product({
-    sku: '55555',
-    name: 'Mochilas 2',
-    description: 'Tamaño de los productos: 30 cms de alto, Material: plastico, Certificación EN71, Packaging. Bolsa plástica individual, Plazo de entrega 90 días.',
-    images: ['/images/77777a.png', '/images/77777b.png', 'https://alicarnold.files.wordpress.com/2009/11/new-product.jpg'],
-    price: 4.88,
+    sku: 'BBS-01',
+    name: 'Botines',
+    description: 'Algodón+PP	12cm	Bolsa Plástica',
+    images: ['/images/BBS-01-img1.png', '/images/BBS-01-img2.png'],
+    price: 2.91,
     prices: [{
       tramo: 1,
       qty: 20000,
-      price: 4.88
+      price: 2.91
     },
     {
       tramo: 2,
       qty: 50000,
-      price: 3.68
+      price: 2.69
     },
     {
       tramo: 3,
       qty: 100000,
-      price: 3.48
-    }],
-    moq: 33000,
-    hscode: '33.333.333',
-    origin: 'China',
+      price: 2.29
+    },
+    {
+      tramo: 4,
+      qty: 200000,
+      price: 2.03
+    }
+  ],
+    moq: 20000,
+    hscode: '',
+    origin: '',
     incoterms: 'CIF',
     provider: 'latam@bigla.cl'
   }),
   new Product({
-    sku: '44444',
-    name: 'Gran producto Gran',
-    description: 'Material: 320 gsm, Medidas60 x 120 cms, Logo Impreso 3 modelos a elegir, Envase: bolsa plástica',
-    images: ['/images/88888a.png', 'http://th15.st.depositphotos.com/2036511/3033/v/450/depositphotos_30332675-stock-illustration-big-red-new-product-button.jpg', '/images/88888b.png'],
-    price: 4.88,
+    sku: 'BBS-02',
+    name: 'Baberos',
+    description: 'Algodón	28x21 cms	Bolsa Plástica',
+    images: ['/images/BBS-02-img1.png'],
+    price: 1.99,
     prices: [{
       tramo: 1,
       qty: 20000,
-      price: 4.88
+      price: 1.99
     },
     {
       tramo: 2,
       qty: 50000,
-      price: 3.68
+      price: 1.76
     },
     {
       tramo: 3,
       qty: 100000,
-      price: 3.48
-    }],
-    moq: 25000,
-    hscode: '44.4444.44',
-    origin: 'China',
+      price: 1.56
+    },
+    {
+      tramo: 4,
+      qty: 200000,
+      price: 1.26
+    }
+  ],
+    moq: 20000,
+    hscode: '',
+    origin: '',
     incoterms: 'CIF',
     provider: 'latam@bigla.cl'
-  })
+  }),
+  new Product({
+    sku: 'BBS-03',
+    name: 'Vasos entrenadores',
+    description: 'PP	280 ML	Bolsa Plástica',
+    images: ['/images/BBS-03-img1.png'],
+    price: 2.26,
+    prices: [{
+      tramo: 1,
+      qty: 20000,
+      price: 2.26
+    },
+    {
+      tramo: 2,
+      qty: 50000,
+      price: 1.79
+    },
+    {
+      tramo: 3,
+      qty: 100000,
+      price: 1.61
+    },
+    {
+      tramo: 4,
+      qty: 200000,
+      price: 1.44
+    }
+  ],
+    moq: 20000,
+    hscode: '',
+    origin: '',
+    incoterms: 'CIF',
+    provider: 'latam@bigla.cl'
+  }),
 ];
 
 // remove all existing products

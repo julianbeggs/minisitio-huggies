@@ -1,5 +1,20 @@
+.signin-page {
+    /*background-image: url("https://unsplash.it/1600/1000/?random");*/
+    background-image: url("/images/huggies2_1_.jpg");
+    background-color: #ffffff;
+    background-position: top right;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.signin-title {
+  font-size: 250%;
+  color: #DA291C;
+  margin-top: 75%;
+}
+
 .thumbnail img {
-  max-height: 150px
+  max-height: 100px
 }
 
 .thumbnail-small {
@@ -8,17 +23,35 @@
 
 .thumbnail .description {
   -webkit-column-rule: #7f7f7f;
+  -ms-column-rule: #7f7f7f;
   -moz-column-rule: #7f7f7f;
   -o-column-rule: #7f7f7f;
   column-rule: #7f7f7f;
 }
 
-.badge {
-  font-weight: bold;
-  font-size: 16px;
+.badge, .btn-success, .btn-primary {
+  font-weight: normal;
+  font-size: 14px;
+  background-color: #DA291C;
+  border-color: white
 }
 
-.navbar-brand img {
-  max-height: 50px;
-  padding: 0;
+.container-fluid {
+  background-color: white;
+}
+
+.navbar-brand,
+.navbar-nav li a {
+    line-height: 75px;
+    height: 75px;
+    padding-top: 0;
+    font-size: 120%;
+}
+
+.logo {
+  max-height: 155px;
+}
+
+.glyphicon {
+    font-size: 18px;
 }

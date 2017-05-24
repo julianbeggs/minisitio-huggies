@@ -5,10 +5,10 @@ var Product = require('../models/product');
 var Order = require('../models/order');
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  console.log('hit index route');
   if (!req.isAuthenticated()) {
     return res.redirect('/user/signin');
   }
+  var currentUser = "req.user"
   var successMsg = req.flash('success')[0];
   Product.find(function(err, docs) {
     var productChunks = [];
@@ -67,9 +67,12 @@ router.post('/checkout', isLoggedIn, function(req, res, next) {
   });
 });
 router.get('/confirm', isLoggedIn, function(req, res, next) {
+  console.log(req.session.cart);
   if (!req.session.cart) {
+    console.log('no cart!!');
     return res.redirect('/cart');
   }
+  console.log('yes there is a cart');
   var cart = new Cart(req.session.cart);
   var errMsg = req.flash('error')[0];
   res.render('shop/confirm', {
@@ -79,19 +82,23 @@ router.get('/confirm', isLoggedIn, function(req, res, next) {
   });
 });
 router.post('/confirm', isLoggedIn, function(req, res, next) {
+  console.log(req.session.cart);
   if (!req.session.cart) {
+    console.log('no cart!!');
     return res.redirect('/cart');
   }
+  console.log('yes there is a cart');
   var cart = new Cart(req.session.cart);
   var order = new Order({
     user: req.user,
     cart: cart,
-    timestamp: date.now()
+    timestamp: Date.now()
   });
   order.save(function(err, result) {
+    console.log('saving order...');
     req.flash('success', 'Pedido confirmado!');
     req.session.cart = null;
-    res.redirect('/');
+    res.redirect('/user/orders');
   });
 });
 module.exports = router;

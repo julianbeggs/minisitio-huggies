@@ -3,9 +3,17 @@
     <div class="row col-md-10 col-sm-12">
       <h3>Pedido en Preparación</h3>
       <h4 class="">Total: ${{totalPrice}}</h4>
-      <div class="">
-        <a href="/confirm" type="button" class="btn btn-success">Confirmar Pedido</a>
-      </div>
+      <form action="/confirm" method="post" id="checkout-form">
+        <div class="row">
+          <div class="col-sm-8">
+            <div class="form-group">
+              <label for="name">Comentarios</label>
+              <input type="text" id="comments" class="form-control" name="comments">
+            </div>
+            <button type="submit" class="btn btn-success">Confirmar y Guardar Pedido</button>
+          </div>
+        </div>
+      </form>
       <hr>
         <div class="table-responsive">
           <table id="mytable" class="table table-bordred table-striped">
@@ -43,7 +51,7 @@
           {{else }}
           <div class="row">
             <div class="col-sm-6 col-md-6 col-md-offset-2 col-sm-offset-2">
-              <h3><a href="/">No tienes pedidos guardados. <br />Comienza un nuevo pedido.</a></h3>
+              <h3><a href="/">No hay pedidos en preparación. <br />Comienza un nuevo pedido.</a></h3>
             </div>
           </div>
         </div>

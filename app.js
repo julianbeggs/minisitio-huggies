@@ -50,8 +50,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 // routes
 app.use(function (req, res, next) {
   res.locals.login = req.isAuthenticated()
+  res.locals.nologin = !req.isAuthenticated()
   res.locals.session = req.session;
-  res.locals.campana = "Back to School 2017"
+  res.locals.campana = ""
   next()
 })
 

@@ -9,9 +9,11 @@
   <link rel='stylesheet' href='/stylesheets/style.css' />
 </head>
 
-<body>
-  {{> header }}
+<body class="{{#if nologin}}signin-page{{/if}}">
   <script src="http://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  {{#if login}}
+  {{> header }}
+  {{/if}}
   <div class="container">
     {{{body}}}
   </div>
