@@ -3,23 +3,26 @@
   <div class="col-md-10 col-sm-12">
       <h3>Historial de Pedidos</h3>
       <hr>
-      {{# each orders }}
+      {{#each orders }}
           <div class="panel panel-default">
               <div class="panel-heading">
-                <h3 class="panel-title">Referencia de Pedido: {{ this._id }}</h3>
+                <div class="panel-title">
+                  <span>User: {{ this.user.firstname }} {{ this.user.lastname }} ({{ this.user.email }})</span><br>
+                  <span>Fecha de Pedido: {{ this.date }}</span>
+                </div>
               </div>
               <div class="panel-body">
                   <ul class="list-group">
                       {{#each this.items }}
                           <li class="list-group-item">
-                              <span class="badge">{{ this.qty }} Unidades</span>
-                              {{ this.item.name }} | {{ this.item.sku }}
+                              {{ this.item.name }} | {{ this.item.sku }} | {{ this.qty }} Unidades
                           </li>
                       {{/each}}
                   </ul>
+                  Comentarios: {{this.comments}}
               </div>
               <div class="panel-footer">
-                  <strong>Total del Pedido: US${{ this.cart.totalPrice }} (Precios Tramo 1)</strong>
+                <strong>Total:   {{this.cart.totalQty}} Unidades |  US${{toFixed this.cart.totalPrice 0}} (Antes de descuentos)</strong>
               </div>
           </div>
       {{/each}}

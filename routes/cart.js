@@ -4,7 +4,6 @@ var Cart = require('../models/cart');
 var Product = require('../models/product');
 var Order = require('../models/order');
 router.get('/', function(req, res, next) {
-  console.log('hit cart route!!');
   if (!req.session.cart) {
     return res.render('shop/cart', {
       products: null

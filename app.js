@@ -1,23 +1,25 @@
-var express = require('express');
-var path = require('path');
-var favicon = require('serve-favicon');
-var logger = require('morgan');
-var cookieParser = require('cookie-parser');
-var bodyParser = require('body-parser');
-var expressHbs = require('express-handlebars');
-var mongoose = require('mongoose');
-var session = require('express-session');
-var passport = require('passport');
-var flash = require('connect-flash');
-var validator = require('express-validator');
-var MongoStore = require('connect-mongo')(session);
+const express = require('express');
+const path = require('path');
+const favicon = require('serve-favicon');
+const logger = require('morgan');
+const cookieParser = require('cookie-parser');
+const bodyParser = require('body-parser');
+const expressHbs = require('express-handlebars');
+const handlebars = require('handlebars');
+const mongoose = require('mongoose');
+const session = require('express-session');
+const passport = require('passport');
+const flash = require('connect-flash');
+const validator = require('express-validator');
+const MongoStore = require('connect-mongo')(session);
+const helpers = require('handlebars-helpers')();
 
 // require routes
-var cartRoutes = require('./routes/cart');
-var userRoutes = require('./routes/user');
-var index = require('./routes/index');
+const cartRoutes = require('./routes/cart');
+const userRoutes = require('./routes/user');
+const index = require('./routes/index');
 
-var app = express();
+const app = express();
 mongoose.connect('mongodb://localhost:27017/shopping')
 require('./config/passport');
 require('./models/cart')

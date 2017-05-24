@@ -38,7 +38,7 @@
                   <td>{{ this.item.name }}</td>
                   <td>{{ this.item.sku }}</td>
                   <td>{{ this.qty }}</td>
-                  <td>${{ this.price }}</td>
+                  <td>${{toFixed this.price 0}}</td>
                   <td>
                       <a type="button" class="btn btn-danger btn-xs" href="/cart/remove/{{this.item._id}}"><span class="glyphicon glyphicon-trash"></span></a>
                   </td>
