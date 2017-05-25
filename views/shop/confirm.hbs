@@ -2,7 +2,7 @@
   {{#if products }}
     <div class="row col-md-10 col-sm-12">
       <h3>Confirmar Pedido</h3>
-      <h4 class="">Total: ${{totalPrice}}</h4>
+      <h4 class="">Total: ${{toFixed totalPrice}}</h4>
       <form action="/confirm" method="post" id="checkout-form">
         <div class="row">
           <div class="col-xs-12">

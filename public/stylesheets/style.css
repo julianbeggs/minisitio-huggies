@@ -1,5 +1,4 @@
 .signin-page {
-    /*background-image: url("https://unsplash.it/1600/1000/?random");*/
     background-image: url("/images/huggies2_1_.jpg");
     background-color: #ffffff;
     background-position: top right;
@@ -8,9 +7,25 @@
 }
 
 .signin-title {
-  font-size: 250%;
+  font-weight: bold;
+  font-size: 180%;
   color: #DA291C;
-  margin-top: 75%;
+  margin-top: 20%;
+}
+
+.signin-form {
+  margin-top: 10%;
+  margin-left: 25%;
+}
+
+.signin-subtext {
+  padding-left: 10px;
+  font-size: 90%;
+  color: #DA291C;
+}
+
+.signin-logo {
+  max-width: 150px;
 }
 
 .thumbnail img {

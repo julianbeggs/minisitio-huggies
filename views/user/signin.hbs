@@ -1,6 +1,7 @@
 <div class="row">
-  <div class="signin-div col-sm-offset-6 col-md-offset-8 col-md-3">
-    <h1 class="signin-title">¡Bienvenido!</h1>
+  <div class="signin-div col-sm-offset-5 col-md-offset-8 col-md-5">
+    <div class="signin-title">Sorprendete con el<br> catálogo de promocionales</div>
+    <img src="/images/logo_huggies.svg" alt="logo huggies" class="signin-logo">
     {{#if hasErrors }}
       <div class="alert alert-danger">
         {{#each messages}}
@@ -8,10 +9,13 @@
         {{/each}}
       </div>
     {{/if}}
+  </div>
+  <div class="col-sm-offset-5 col-md-offset-7 col-md-5">
     <form class="signin-form" action="/user/signin" method="post">
       <div class="form-group">
         <input type="text" class="form-control" id="email" name="email" placeholder="email">
         <input type="hidden" name="_csrf" value="{{ csrfToken }}">
+        <label class="signin-subtext" for="email">Ingresa aquí con tu email</label>
         <button class="btn btn-primary pull-right" type="submit" name="button">Ingresar</button>
       </div>
     </form>

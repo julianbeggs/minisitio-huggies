@@ -15,14 +15,14 @@
                   <ul class="list-group">
                       {{#each this.items }}
                           <li class="list-group-item">
-                              {{ this.item.name }} | {{ this.item.sku }} | {{ this.qty }} Unidades
+                              {{ this.item.name }} | {{ this.item.sku }} | {{addCommas this.qty }} Unidades
                           </li>
                       {{/each}}
                   </ul>
                   Comentarios: {{this.comments}}
               </div>
               <div class="panel-footer">
-                <strong>Total:   {{this.cart.totalQty}} Unidades |  US${{toFixed this.cart.totalPrice 0}} (Antes de descuentos)</strong>
+                <strong>TOTAL PEDIDO:  {{addCommas this.cart.totalQty}} Unidades,   US$ {{toFixed this.cart.totalPrice 0}} CIF (Antes de descuentos)</strong>
               </div>
           </div>
       {{/each}}
