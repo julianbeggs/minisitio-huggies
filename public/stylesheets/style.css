@@ -1,3 +1,45 @@
+@font-face {
+  font-family: 'Omnes_Huggies';
+  font-weight: normal;
+  font-style: normal;
+  src: url('/fonts/Omnes_Huggies-Regular.otf') format("opentype");
+}
+
+@font-face {
+  font-family: 'Omnes_Huggies';
+  font-weight: bold;
+  font-style: normal;
+  src: url('/fonts/Omnes_Huggies-Bold.otf') format("opentype");
+}
+
+@font-face {
+  font-family: 'Omnes_Huggies';
+  font-weight: normal;
+  font-style: italic;
+  src: url('/fonts/Omnes_Huggies-Italic.otf') format("opentype");
+}
+
+@font-face {
+  font-family: 'Omnes_Huggies';
+  font-weight: bold;
+  font-style: italic;
+  src: url('/fonts/Omnes_Huggies-Bolditalic.otf') format("opentype");
+}
+
+  /*src: url('/fonts/Omnes_HuggiesBlack-Italic.otf') format("opentype");
+  src: url('/fonts/Omnes_HuggiesExtraLight.otf') format("opentype");
+  src: url('/fonts/Omnes_HuggiesExtraLight-Italic.otf') format("opentype");
+  src: url('/fonts/Omnes_HuggiesHairline.otf') format("opentype");
+  src: url('/fonts/Omnes_HuggiesHairline-Italic.otf') format("opentype");
+  src: url('/fonts/Omnes_HuggiesLight.otf') format("opentype");
+  src: url('/fonts/Omnes_HuggiesLight-Italic.otf') format("opentype");
+  src: url('/fonts/Omnes_HuggiesMedium.otf') format("opentype");
+  src: url('/fonts/Omnes_HuggiesMedium-Italic.otf') format("opentype");
+  src: url('/fonts/Omnes_HuggiesSemiBold.otf') format("opentype");
+  src: url('/fonts/Omnes_HuggiesSemiBold-Italic.otf') format("opentype");
+  src: url('/fonts/Omnes_HuggiesThin.otf') format("opentype");
+  src: url('/fonts/Omnes_HuggiesThin-Italic.otf') format("opentype");*/
+
 .signin-page {
     background-image: url("/images/huggies2_1_.jpg");
     background-color: #ffffff;
@@ -7,8 +49,10 @@
 }
 
 .signin-title {
-  font-weight: bold;
-  font-size: 180%;
+  font-family: 'Omnes_Huggies';
+  font-weight: bolder;
+  font-style: normal;
+  font-size: 200%;
   color: #DA291C;
   margin-top: 20%;
 }
@@ -19,8 +63,11 @@
 }
 
 .signin-subtext {
+  font-family: 'Omnes_Huggies';
+  font-weight: lighter;
+  font-style: italic;
   padding-left: 10px;
-  font-size: 90%;
+  font-size: 120%;
   color: #DA291C;
 }
 
@@ -45,8 +92,9 @@
 }
 
 .badge, .btn-success, .btn-primary {
+  font-family: 'Omnes_Huggies';
   font-weight: normal;
-  font-size: 14px;
+  font-size: 120%;
   background-color: #DA291C;
   border-color: white
 }
@@ -57,10 +105,11 @@
 
 .navbar-brand,
 .navbar-nav li a {
-    line-height: 75px;
-    height: 75px;
-    padding-top: 0;
-    font-size: 120%;
+  font-family: 'Omnes_Huggies';
+  line-height: 75px;
+  height: 75px;
+  padding-top: 0;
+  font-size: 120%;
 }
 
 .logo {

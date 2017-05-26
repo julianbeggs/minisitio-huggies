@@ -37,13 +37,13 @@
                   {{#each prices}}
                     <li class="list-group-item">
                       <span class="badge">${{ this.price }}</span>
-                      <span>Tramo {{ this.tramo }}: {{ this.qty }} unidades</span>
+                      <span>Tramo {{ this.tramo }}: {{addCommas this.qty }} unidades</span>
                     </li>
                   {{/each}}
                 </ul>
                 <form class="form form-inline" action="/cart/add-to-cart/{{id}}" method="get">
                   <div class="form-group col-sm-4 col-md-6">
-                    <input type="number" class="form-control pull-left" id="addQty" name="addQty" placeholder="MOQ={{ this.moq }}" required size="9" min="{{this.moq}}">
+                    <input type="number" class="form-control pull-left" id="addQty" name="addQty" placeholder="Mínimo {{addCommas this.moq }}" required size="9" min="{{this.moq}}">
                   </div>
                   <input type="submit" class="btn btn-success pull-right" value="Agregar">
                 </form>

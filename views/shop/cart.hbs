@@ -2,7 +2,7 @@
   {{#if products }}
     <div class="row col-md-10 col-sm-12">
       <h3>Pedido en Preparación</h3>
-      <h4 class="">Total: ${{toFixed totalPrice 0}}</h4>
+      <h4 class="">Total: ${{addCommas (toFixed totalPrice 0)}}</h4>
       <form action="/confirm" method="post" id="checkout-form">
         <div class="row">
           <div class="col-sm-8">
@@ -38,7 +38,7 @@
                   <td>{{ this.item.name }}</td>
                   <td>{{ this.item.sku }}</td>
                   <td>{{addCommas this.qty }}</td>
-                  <td>${{toFixed this.price 0}}</td>
+                  <td>${{addCommas (toFixed this.price 0)}}</td>
                   <td>
                       <a type="button" class="btn btn-danger btn-xs" href="/cart/remove/{{this.item._id}}"><span class="glyphicon glyphicon-trash"></span></a>
                   </td>

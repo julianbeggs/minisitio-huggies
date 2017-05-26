@@ -22,7 +22,7 @@
                   Comentarios: {{this.comments}}
               </div>
               <div class="panel-footer">
-                <strong>TOTAL PEDIDO:  {{addCommas this.cart.totalQty}} Unidades,   US$ {{toFixed this.cart.totalPrice 0}} CIF (Antes de descuentos)</strong>
+                <strong>TOTAL PEDIDO:  {{addCommas this.cart.totalQty}} Unidades,   US$ {{addCommas (toFixed this.cart.totalPrice 0)}} CIF (Antes de descuentos)</strong>
               </div>
           </div>
       {{/each}}
