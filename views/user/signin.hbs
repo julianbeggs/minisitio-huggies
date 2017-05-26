@@ -1,7 +1,7 @@
 <div class="row">
-  <div class="signin-div col-sm-offset-5 col-md-offset-8 col-md-5">
+  <div class="signin-div col-xs-6 col-xs-offset-7 col-md-offset-7 col-md-6">
     <div class="signin-title">Sorprendete con el<br> catálogo de promocionales</div>
-    <img src="/images/logo_huggies.svg" alt="logo huggies" class="signin-logo">
+    <img src="/images/logo_huggies.png" alt="logo huggies" class="signin-logo">
     {{#if hasErrors }}
       <div class="alert alert-danger">
         {{#each messages}}
@@ -10,7 +10,7 @@
       </div>
     {{/if}}
   </div>
-  <div class="col-sm-offset-5 col-md-offset-7 col-md-5">
+  <div class="col-xs-6 col-xs-offset-6 col-md-offset-6 col-md-6">
     <form class="signin-form" action="/user/signin" method="post">
       <div class="form-group">
         <input type="text" class="form-control" id="email" name="email" placeholder="email">
