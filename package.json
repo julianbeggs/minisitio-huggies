@@ -15,7 +15,7 @@
     "express-validator": "^3.2.0",
     "handlebars": "^4.0.10",
     "handlebars-helpers": "^0.8.2",
-    "mongoose": "^4.10.2",
+    "mongoose": "^5.7.5",
     "morgan": "^1.8.2",
     "nodemailer": "^4.0.1",
     "nodemailer-express-handlebars": "^2.0.0",
